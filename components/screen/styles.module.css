@@ -1,0 +1,53 @@
+.screen_wrapper {
+  padding: 20px 108px 20px 24px;
+  height: calc(100vh - var(--input-height));
+  height: calc(var(--vh, 1vh) * 100 - var(--input-height));
+  overflow-y: auto;
+}
+
+.command_response {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fade_in 0.5s ease-in-out;
+  opacity: 0;
+  animation-delay: var(--delay);
+  animation-fill-mode: forwards;
+}
+
+.command_mirror {
+  color: var(--secondary-text-color);
+  animation: fade_in 0.5s ease-in-out;
+  opacity: 0;
+  animation-delay: var(--delay);
+  animation-fill-mode: forwards;
+}
+
+.command_mirror::before {
+  content: "-> ";
+}
+
+.command_hint {
+  font-style: italic;
+}
+
+.line_break {
+  height: 20px;
+}
+
+.image_response {
+  border-radius: 1rem;
+}
+
+.emoji_response {
+  font-size: 4rem;
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

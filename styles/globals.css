@@ -1,26 +1,86 @@
+:root {
+  --input-height: 50px;
+  --primary-text-color: #17938e;
+  --secondary-text-color: #ef3679;
+}
+
+html {
+  color-scheme: light;
+}
+
+*::selection {
+  background-color: #f8f8f8;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Fira Code", monospace;
+  overflow: hidden;
+  color: var(--primary-text-color);
+  background-color: #ffdee9;
+  background-image: linear-gradient(25deg, #ffdee9 0%, #b5fffc 100%);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--primary-color-200);
 }
 
 * {
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input {
+  color: var(--primary-color-100);
+}
+
+ul {
+  padding: 0 16px;
+  margin: 0;
+}
+
+ul li {
+  margin: 4px 0;
+}
+
+.main_image_container {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+}
+
+.main_image {
+  border-radius: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  :root {
+    --input-height: 50px;
+    --primary-text-color: #f8f8f8;
+    --secondary-text-color: #ffd3f0;
   }
+
+  html {
+    color-scheme: light;
+  }
+
+  *::selection {
+    background-color: #082440;
+  }
+
+  html,
   body {
-    color: white;
-    background: black;
+    background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   }
 }

@@ -3,17 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3010",
     "build": "next build",
+    "build-wasm": "GOOS=js GOARCH=wasm go build -o ./public/parser.wasm  -ldflags=\"-s -w\"  ./util/parser.go",
+    "build-grammar": "nearleyc ./util/grammar.ne -o ./util/grammar.ts",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/hooks": "^5.7.2",
+    "command-line-args": "^5.2.1",
+    "moo": "^0.5.2",
+    "nearley": "^2.20.1",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/nearley": "^2.11.2",
     "@types/node": "18.8.4",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
