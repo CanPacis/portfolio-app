@@ -3,6 +3,7 @@
   height: calc(100vh - var(--input-height));
   height: calc(var(--vh, 1vh) * 100 - var(--input-height));
   overflow-y: auto;
+  flex: 1;
 }
 
 .command_response {
@@ -16,6 +17,7 @@
 }
 
 .command_mirror {
+  word-break: break-all;
   color: var(--secondary-text-color);
   animation: fade_in 0.5s ease-in-out;
   opacity: 0;
